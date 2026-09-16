@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+
+# 작업 중 생긴 백업·압축본
+*.backup
+*.zip

@@ -1,0 +1,157 @@
+/* 한글이 어절 중간에서 끊기지 않도록 하는 필수 설정 */
+* { word-break: keep-all; overflow-wrap: break-word; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, system-ui, -apple-system, sans-serif;
+  background-color: #fffaf0;
+  color: #3a3a3a;
+  font-feature-settings: 'ss01';
+}
+
+/* ── 타이포 스케일 (weight 500 초과 금지, 카드 제목만 600) ── */
+.t-h1 { font-size: 44px; font-weight: 500; letter-spacing: -0.05em; line-height: 1.0;  color: #0a0a0a; }
+.t-h2 { font-size: 34px; font-weight: 500; letter-spacing: -0.04em; line-height: 1.08; color: #0a0a0a; }
+.t-h3 { font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; color: #0a0a0a; }
+@media (min-width: 768px) {
+  .t-h1 { font-size: 72px; }
+  .t-h2 { font-size: 56px; }
+  .t-h3 { font-size: 32px; }
+}
+.t-card-title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
+.t-body { font-size: 16px; font-weight: 400; line-height: 1.55; }
+.t-cap  { font-size: 13px; font-weight: 500; line-height: 1.4; }
+
+/* ── 공통 컨테이너 (모든 섹션이 동일하게 공유) ── */
+.shell { max-width: 1280px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+/* ── 버튼 ── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 48px; padding: 0 22px; border-radius: 12px;
+  font-size: 15px; font-weight: 500; letter-spacing: -0.01em;
+  transition: opacity .15s ease, background-color .15s ease;
+}
+.btn-primary { background-color: #0a0a0a; color: #fffaf0; }
+.btn-primary:hover { opacity: .85; }
+.btn-secondary { background-color: transparent; color: #0a0a0a; border: 1px solid #e5e5e5; }
+.btn-secondary:hover { background-color: #f5f0e0; }
+.btn-sm { height: 40px; padding: 0 16px; font-size: 14px; }
+
+/* ── 배지 / pill ── */
+.pill {
+  display: inline-flex; align-items: center;
+  height: 26px; padding: 0 12px; border-radius: 999px;
+  font-size: 13px; font-weight: 500; letter-spacing: -0.01em; white-space: nowrap;
+}
+
+/* ── 카드 ── */
+.card      { border-radius: 16px; padding: 32px; }
+.card-sat  { border-radius: 24px; padding: 32px; }
+
+.nav-link { font-size: 15px; font-weight: 500; color: #3a3a3a; letter-spacing: -0.01em; }
+.nav-link:hover { color: #0a0a0a; }
+
+/* ── 노션풍 데이터베이스 미니 UI (정적 장식 · 순수 CSS) ── */
+.n-doc { width:15px; height:17px; flex:none; border:1.5px solid #6a6a6a; border-radius:3px; position:relative; opacity:.65; }
+.n-doc::before, .n-doc::after { content:''; position:absolute; left:3px; right:3px; height:1.5px; background:#6a6a6a; }
+.n-doc::before { top:3px; }
+.n-doc::after  { top:7px; }
+
+.n-check { width:13px; height:13px; flex:none; border:1px solid #e5e5e5; border-radius:3px; background:#fffaf0; }
+
+.n-ico-title { font-size:11px; font-weight:500; color:#6a6a6a; line-height:1; }
+
+.n-ico-person { width:11px; height:11px; flex:none; position:relative; opacity:.75; }
+.n-ico-person::before { content:''; position:absolute; top:0; left:3px; width:5px; height:5px; border:1.2px solid #6a6a6a; border-radius:999px; }
+.n-ico-person::after  { content:''; position:absolute; bottom:0; left:0; width:11px; height:5px; border:1.2px solid #6a6a6a; border-bottom:0; border-radius:999px 999px 0 0; }
+
+.n-ico-status { width:11px; height:11px; flex:none; border:1.2px solid #6a6a6a; border-radius:999px; position:relative; opacity:.75; }
+.n-ico-status::after { content:''; position:absolute; inset:2px; border-radius:999px; background:#6a6a6a; clip-path: inset(0 50% 0 0); }
+
+.n-ava { width:20px; height:20px; flex:none; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; font-size:11px; font-weight:500; }
+
+/* 모든 행이 동일한 컬럼 규격을 공유 */
+.n-r { display:grid; grid-template-columns: 1fr 96px 88px; }
+.n-cell { padding:10px 12px; display:flex; align-items:center; gap:8px; border-top:1px solid #e5e5e5; min-height:42px; }
+.n-head { padding:8px 12px; display:flex; align-items:center; gap:6px; }
+.n-vr { border-right:1px solid #e5e5e5; }
+.n-row:hover .n-cell { background-color:#faf5e8; }
+
+/* ── DB 체험 위젯 ── */
+.tab { height:34px; padding:0 16px; border-radius:999px; border:0; cursor:pointer;
+       font-family:inherit; font-size:13px; font-weight:500; letter-spacing:-0.01em;
+       background:transparent; color:#6a6a6a; }
+.tab[aria-selected="true"] { background:#f5f0e0; color:#0a0a0a; }
+
+/* 상태 배지 (토큰 6색 안에서만) */
+.st { display:inline-flex; align-items:center; height:26px; padding:0 12px; border-radius:999px;
+      font-size:13px; font-weight:500; white-space:nowrap; color:#0a0a0a; }
+.st-todo  { background:#f5f0e0; }
+.st-doing { background:#e8b94a; }
+.st-done  { background:#ffb084; }
+
+/* 담당자 아바타 */
+.av { width:22px; height:22px; flex:none; border-radius:999px; display:inline-flex;
+      align-items:center; justify-content:center; font-size:11px; font-weight:500; }
+.av-1 { background:#ff4d8b; color:#ffffff; }
+.av-2 { background:#1a3a3a; color:#ffffff; }
+.av-3 { background:#ffb084; color:#0a0a0a; }
+.av-4 { background:#b8a4ed; color:#0a0a0a; }
+
+/* 표 뷰: 열 폭 고정 (내용 길이로 폭이 변하지 않음) */
+.tb-scroll { overflow-x:auto; }
+.tb-r { display:grid; grid-template-columns:380px 180px 180px 140px; min-width:880px; }
+.tb-h { padding:10px 14px; }
+.tb-c { padding:14px; display:flex; align-items:center; gap:8px; min-height:52px;
+        border-top:1px solid #e5e5e5; }
+
+/* 보드 / 캘린더 뷰 */
+.col-grid { display:grid; grid-template-columns:1fr; gap:24px; }
+@media (min-width:768px) { .col-grid { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+.col-head { display:flex; align-items:center; gap:8px; padding-bottom:14px;
+            border-bottom:1px solid #e5e5e5; }
+.mini { background:#f5f0e0; border-radius:16px; padding:16px; }
+.mini + .mini { margin-top:12px; }
+
+/* ── 인라인 style에서 분리한 레이아웃 클래스 ── */
+.sec { padding-top:96px; padding-bottom:96px; }
+
+.lede-520 { max-width:520px; }
+.lede-560 { max-width:560px; }
+.lede-640 { max-width:640px; }
+
+.op-72 { opacity:.72; }
+.op-76 { opacity:.76; }
+.op-78 { opacity:.78; }
+.op-86 { opacity:.86; }
+
+.wordmark { font-size:18px; font-weight:500; letter-spacing:-0.03em; }
+.pill-outline { border:1px solid #e5e5e5; }
+
+/* 학습 경로 카드 */
+.lv-meta  { padding-top:24px; margin-top:auto; border-top:1px solid #e5e5e5; }
+.lv-arrow { margin-left:auto; font-size:16px; line-height:1; }
+
+/* CTA · 푸터 */
+.cta-band { border-radius:24px; padding:80px 24px; }
+.f-list { margin-top:14px; display:flex; flex-direction:column; gap:10px; }
+.f-copy { margin-top:56px; padding-top:24px; border-top:1px solid #e5e5e5; }
+
+/* Hero 미니 UI */
+.n-page  { border-radius:16px; padding:20px 16px 14px; }
+.n-pad   { padding:0 4px; }
+.n-bar   { margin-top:14px; padding:0 4px; }
+.n-title { font-size:17px; font-weight:500; letter-spacing:-0.02em; }
+.n-foot  { border-top:1px solid #e5e5e5; padding:10px 12px 2px; }
+.n-dots  { letter-spacing:1px; }
+
+/* DB 체험 위젯 */
+.exp-tabs { padding-bottom:16px; border-bottom:1px solid #e5e5e5; }
+.exp-data { border-radius:16px; padding:24px; margin-top:24px; min-height:460px; }
+.exp-body { padding-top:16px; }
+.mini-row { margin-top:12px; }
+.col-body { margin-top:14px; }
+.push-right { margin-left:auto; }
+
