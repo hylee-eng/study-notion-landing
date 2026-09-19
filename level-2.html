@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>레벨 2 · 백지에서 시작하지 않기 - Study Notion</title>
+<meta name="description" content="무엇부터 노션에 옮길지 정하는 기준과 매일 여는 홈 페이지 한 장 만들기. 15분 실습.">
+
+<!-- 한글 글리프 포함 폰트 (Inter 사용 금지) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas:   '#fffaf0',
+          soft:     '#faf5e8',
+          cream:    '#f5f0e0',
+          ink:      '#0a0a0a',
+          bodytext: '#3a3a3a',
+          muted:    '#6a6a6a',
+          hairline: '#e5e5e5',
+          pink:     '#ff4d8b',
+          teal:     '#1a3a3a',
+          lavender: '#b8a4ed',
+          peach:    '#ffb084',
+          ochre:    '#e8b94a'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-canvas">
+
+<!-- ══════════════ 상단 네비 ══════════════ -->
+<header class="bg-canvas border-b border-hairline">
+  <div class="shell">
+    <nav class="h-16 flex items-center justify-between">
+      <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html#why" class="nav-link">왜 어려울까</a></li>
+        <li><a href="index.html#path" class="nav-link">학습 경로</a></li>
+        <li><a href="index.html#try" class="nav-link">직접 해보기</a></li>
+      </ul>
+
+      <a href="index.html#path" class="btn btn-primary btn-sm">전체 경로 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════ 레벨 머리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <div class="crumb">
+      <a href="index.html">홈</a>
+      <span class="crumb-sep">/</span>
+      <a href="index.html#path">학습 경로</a>
+      <span class="crumb-sep">/</span>
+      <span class="text-ink">레벨 2</span>
+    </div>
+
+    <div class="lv-hero bg-peach mt-6">
+      <span class="pill bg-cream text-ink">LEVEL 2</span>
+
+      <h1 class="t-h1 text-ink mt-6">백지에서 <br class="hidden md:block">시작하지 않기</h1>
+
+      <p class="t-body text-ink mt-6 op-76 lede-520">
+        무엇을 만들지 모르는 채로 빈 화면을 여는 것이 <br class="hidden md:block">노션을 포기하게 만드는 가장 흔한 순간입니다.
+      </p>
+
+      <div class="lv-hero-meta">
+        <span class="pill bg-cream text-ink">15분</span>
+        <span class="pill bg-cream text-ink">입문</span>
+        <span class="pill bg-cream text-ink">앞 단계 · 레벨 1</span>
+      </div>
+
+      <div class="prog">
+        <div class="prog-track prog-track-dark"><div class="prog-fill prog-fill-dark" style="width:40%"></div></div>
+        <span class="t-cap text-ink op-76">2 / 5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 이 단계를 마치면 ══════════════ -->
+<section class="bg-canvas">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">이 단계를 마치면</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          도구를 배우는 단계가 아니라 <br class="hidden md:block">무엇을 옮길지 정하는 단계입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="goal">
+          <span class="goal-mark">1</span>
+          <p class="t-body text-bodytext">노션에 옮길 것과 두고 올 것을 가를 기준이 생깁니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">2</span>
+          <p class="t-body text-bodytext">매일 여는 홈 페이지 한 장을 갖게 됩니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">3</span>
+          <p class="t-body text-bodytext">페이지 안에 페이지를 넣어 구조를 만듭니다</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 실습 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">따라 해봅니다</h2>
+    <p class="t-body text-muted mt-5 lede-560">
+      이번 단계는 노션 기능보다 종이 한 장이 먼저입니다. <br class="hidden md:block">적고 나서 옮깁니다.
+    </p>
+
+    <div class="mt-12">
+
+      <!-- STEP 01 -->
+      <div class="step">
+        <div class="step-n">STEP 01</div>
+        <div>
+          <h3 class="t-card-title text-ink">지금 흩어져 있는 것을 적습니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            업무 정보가 지금 어디에 있는지 그대로 적어봅니다.
+            노션을 어떻게 쓸지는 아직 생각하지 않습니다. 현재 상태를 보는 것이 먼저입니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd">메모앱</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">오늘 할 일, 회의 중 급히 적은 것</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">메신저</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">받은 파일, 결정된 내용</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">메일함</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">요청 사항, 일정 확인</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">머릿속</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">어디에도 없지만 잊으면 안 되는 것</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step">
+        <div class="step-n">STEP 02</div>
+        <div>
+          <h3 class="t-card-title text-ink">기준 하나로 가릅니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            전부 옮기면 반드시 실패합니다. 기준은 하나면 충분합니다.
+            다시 찾아볼 일이 있는가. 한 번 쓰고 끝나는 것은 원래 있던 자리에 두는 편이 낫습니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd kbd-solid">옮긴다</span>
+              <span class="t-cap text-bodytext">회의록 · 담당 업무 목록 · 반복되는 작업 절차 · 자료 링크</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">두고 온다</span>
+              <span class="t-cap text-bodytext">일회성 메모 · 이미 끝난 대화 · 파일 저장소로 충분한 것</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step">
+        <div class="step-n">STEP 03</div>
+        <div>
+          <h3 class="t-card-title text-ink">홈 페이지 한 장을 만듭니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            매일 여는 페이지를 하나 정합니다. 이 페이지 안에서 슬래시 뒤에 페이지를 검색하면
+            하위 페이지가 만들어집니다. 폴더를 따로 만드는 것이 아니라, 페이지 안에 페이지를 넣는 방식입니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">사이드바</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-tree-item ui-tree-on">
+                  <span class="ui-tw">▾</span>
+                  <span class="n-doc"></span>
+                  내 업무 홈
+                </div>
+                <div class="ui-tree-item ui-tree-sub"><span class="n-doc"></span>회의록</div>
+                <div class="ui-tree-item ui-tree-sub"><span class="n-doc"></span>진행 중 업무</div>
+                <div class="ui-tree-item ui-tree-sub"><span class="n-doc"></span>자료함</div>
+                <div class="ui-tree-item"><span class="ui-tw">+</span>새 페이지</div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">폴더를 만드는 것이 아니라 페이지 안에 페이지를 넣습니다</figcaption>
+          </figure>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd">/페이지</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">지금 페이지 안에 하위 페이지 만들기</span>
+            </div>
+            <div class="demo-line">
+              <span class="t-cap text-muted">내 업무 홈</span>
+              <span class="to">›</span>
+              <span class="t-cap text-bodytext">회의록 · 진행 중 업무 · 자료함</span>
+            </div>
+          </div>
+
+          <p class="t-cap text-muted mt-4">처음에는 하위 페이지 세 개를 넘기지 않습니다</p>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step">
+        <div class="step-n">STEP 04</div>
+        <div>
+          <h3 class="t-card-title text-ink">첫 주는 한 곳만 옮깁니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            고른 것 중 가장 자주 여는 하나만 노션으로 옮깁니다. 보통 회의록이나 할 일 목록입니다.
+            한 주 동안 실제로 쓰이면 남기고, 손이 가지 않으면 구조가 아니라 대상 선택이 틀린 것입니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 자주 막히는 지점 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">여기서 자주 막힙니다</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">좋아 보이는 템플릿부터 받았어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          템플릿은 남의 업무 구조입니다. 내 업무가 어떤 모양인지 모르는 상태에서 받으면
+          채우지 못한 칸만 남습니다. 템플릿은 레벨 5에서 다시 봅니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">구조를 완벽하게 짜고 시작하려 해요</h3>
+        <p class="t-body text-bodytext mt-3">
+          노션은 나중에 옮기고 합치기 쉬운 도구입니다.
+          설계를 끝내고 시작하는 것보다, 한 주 써보고 고치는 쪽이 훨씬 빠릅니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">페이지가 금방 열 개가 넘어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          흩어진 것을 한곳에 모으려고 시작했는데 노션 안에서 다시 흩어진 상태입니다.
+          같은 성격의 페이지가 세 개를 넘으면 데이터베이스로 묶을 때입니다. 다음 단계에서 다룹니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 완료 체크 · 다음 단계 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">다 했는지 확인하기</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          만든 양이 아니라 <br class="hidden md:block">정해진 것이 있는지로 봅니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">업무 정보가 어디에 흩어져 있는지 적어봤습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">옮길 것과 두고 올 것을 갈랐습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">매일 열 홈 페이지를 한 장 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">홈 페이지 안에 하위 페이지를 넣어봤습니다</p></div>
+      </div>
+
+    </div>
+
+    <div class="pager mt-16">
+      <a href="level-1.html" class="pager-card">
+        <div class="t-cap text-muted">이전 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 1 · 손이 먼저 익숙해지기</div>
+      </a>
+      <a href="level-3.html" class="pager-card pager-r">
+        <div class="t-cap text-muted">다음 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 3 · 데이터베이스라는 발상</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 푸터 ══════════════ -->
+<footer class="bg-soft">
+  <div class="shell py-20">
+
+    <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+
+      <div>
+        <div class="t-cap text-muted">학습</div>
+        <ul class="f-list">
+          <li><a href="index.html#path" class="t-body text-bodytext">전체 학습 경로</a></li>
+          <li><a href="level-1.html" class="t-body text-bodytext">기초 블록 다루기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">데이터베이스 입문</a></li>
+          <li><a href="level-4.html" class="t-body text-bodytext">협업과 권한 설정</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">자료실</div>
+        <ul class="f-list">
+          <li><a href="level-5.html" class="t-body text-bodytext">업무 구조 설계하기</a></li>
+          <li><a href="level-1.html#shortcut" class="t-body text-bodytext">단축 입력 정리표</a></li>
+          <li><a href="index.html#how" class="t-body text-bodytext">학습 방식 안내</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">자주 묻는 질문</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">단계별로 보기</div>
+        <ul class="f-list">
+          <li><a href="level-1.html" class="t-body text-bodytext">레벨 1 · 손이 먼저 익숙해지기</a></li>
+          <li><a href="level-2.html" class="t-body text-bodytext">레벨 2 · 백지에서 시작하지 않기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">레벨 3 · 데이터베이스라는 발상</a></li>
+          <li><a href="level-5.html" class="t-body text-bodytext">레벨 5 · 내 업무에 맞게 설계하기</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">스터디 노션</div>
+        <ul class="f-list">
+          <li><a href="index.html#who" class="t-body text-bodytext">이런 분께 맞습니다</a></li>
+          <li><a href="index.html#why" class="t-body text-bodytext">왜 어려울까</a></li>
+          <li><a href="index.html#try" class="t-body text-bodytext">데이터베이스 체험</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">노션 계정 만들기 안내</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="t-cap text-muted f-copy">
+      © 2026 스터디 노션. 이 사이트는 노션 학습을 돕는 비공식 교육 자료입니다.
+      노션(Notion)은 Notion Labs, Inc.의 상표입니다.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

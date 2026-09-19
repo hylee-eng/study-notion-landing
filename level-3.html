@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>레벨 3 · 데이터베이스라는 발상 - Study Notion</title>
+<meta name="description" content="같은 데이터를 표·보드·캘린더로 보는 법. 속성과 보기, 필터까지 20분 실습으로 익힙니다.">
+
+<!-- 한글 글리프 포함 폰트 (Inter 사용 금지) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas:   '#fffaf0',
+          soft:     '#faf5e8',
+          cream:    '#f5f0e0',
+          ink:      '#0a0a0a',
+          bodytext: '#3a3a3a',
+          muted:    '#6a6a6a',
+          hairline: '#e5e5e5',
+          pink:     '#ff4d8b',
+          teal:     '#1a3a3a',
+          lavender: '#b8a4ed',
+          peach:    '#ffb084',
+          ochre:    '#e8b94a'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-canvas">
+
+<!-- ══════════════ 상단 네비 ══════════════ -->
+<header class="bg-canvas border-b border-hairline">
+  <div class="shell">
+    <nav class="h-16 flex items-center justify-between">
+      <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html#why" class="nav-link">왜 어려울까</a></li>
+        <li><a href="index.html#path" class="nav-link">학습 경로</a></li>
+        <li><a href="index.html#try" class="nav-link">직접 해보기</a></li>
+      </ul>
+
+      <a href="index.html#path" class="btn btn-primary btn-sm">전체 경로 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════ 레벨 머리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <div class="crumb">
+      <a href="index.html">홈</a>
+      <span class="crumb-sep">/</span>
+      <a href="index.html#path">학습 경로</a>
+      <span class="crumb-sep">/</span>
+      <span class="text-ink">레벨 3</span>
+    </div>
+
+    <div class="lv-hero bg-teal mt-6">
+      <span class="pill bg-cream text-ink">LEVEL 3</span>
+
+      <h1 class="t-h1 text-white mt-6">데이터베이스라는 <br class="hidden md:block">발상</h1>
+
+      <p class="t-body text-white mt-6 op-86 lede-520">
+        노션에서 가장 강력하면서 <br class="hidden md:block">가장 설명이 생략되는 부분입니다.
+      </p>
+
+      <div class="lv-hero-meta">
+        <span class="pill bg-cream text-ink">20분</span>
+        <span class="pill bg-cream text-ink">입문</span>
+        <span class="pill bg-cream text-ink">앞 단계 · 레벨 2</span>
+      </div>
+
+      <div class="prog">
+        <div class="prog-track"><div class="prog-fill" style="width:60%"></div></div>
+        <span class="t-cap text-white op-86">3 / 5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 핵심 개념 ══════════════ -->
+<section class="bg-canvas">
+  <div class="shell">
+    <div class="card-sat bg-cream">
+      <span class="pill bg-ink text-canvas">핵심 한 줄</span>
+      <h2 class="t-h3 mt-5">데이터는 하나입니다. <br class="hidden md:block">보는 방식만 여러 개입니다.</h2>
+      <p class="t-body text-bodytext mt-4 lede-640">
+        표를 보드로 바꿔도 내용은 그대로입니다. 옮겨 적는 것이 아니라 같은 내용을 다르게 그리는 것입니다.
+        이 문장 하나가 이해되면 이 단계는 끝난 것입니다.
+      </p>
+      <div class="mt-7">
+        <a href="index.html#try" class="btn btn-secondary">먼저 체험해보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 이 단계를 마치면 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">이 단계를 마치면</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          엑셀의 표와 비슷해 보이지만 <br class="hidden md:block">쓰임이 다른 이유를 알게 됩니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="goal">
+          <span class="goal-mark">1</span>
+          <p class="t-body text-bodytext">일반 표와 데이터베이스 표를 구분할 수 있습니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">2</span>
+          <p class="t-body text-bodytext">담당자·마감일·상태 같은 속성을 직접 추가합니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">3</span>
+          <p class="t-body text-bodytext">같은 데이터를 보드와 캘린더로 바꿔 봅니다</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 실습 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">따라 해봅니다</h2>
+    <p class="t-body text-muted mt-5 lede-560">
+      레벨 2에서 만든 홈 페이지 안에서 시작합니다. <br class="hidden md:block">업무 목록 하나를 데이터베이스로 만들어 봅니다.
+    </p>
+
+    <div class="mt-12">
+
+      <!-- STEP 01 -->
+      <div class="step">
+        <div class="step-n">STEP 01</div>
+        <div>
+          <h3 class="t-card-title text-ink">표를 만들되, 일반 표를 고르지 않습니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            슬래시 뒤에 표를 검색하면 비슷한 항목이 여러 개 나옵니다.
+            데이터베이스 표를 골라야 뒤에 나올 보기 전환과 필터를 쓸 수 있습니다.
+            일반 표는 칸을 채우는 것으로 끝나는 정적인 표입니다.
+          </p>
+
+          <div class="ui-two">
+
+            <div>
+              <div class="ui-label">일반 표</div>
+              <figure class="shot">
+                <div class="ui">
+                  <div class="ui-body">
+                    <div class="ui-tb ui-grid">
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-th">업무</div>
+                        <div class="ui-th">상태</div>
+                      </div>
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-td">촬영 일정 확정</div>
+                        <div class="ui-td">진행 중</div>
+                      </div>
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-td">예산안 검토</div>
+                        <div class="ui-td">완료</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption class="shot-cap">칸을 채우는 것으로 끝납니다</figcaption>
+              </figure>
+            </div>
+
+            <div>
+              <div class="ui-label">데이터베이스 표</div>
+              <figure class="shot">
+                <div class="ui">
+                  <div class="ui-body">
+                    <div class="ui-views">
+                      <span class="ui-view ui-view-on">표</span>
+                      <span class="ui-view">보드</span>
+                      <span class="ui-view">캘린더</span>
+                      <span class="ui-tool push-right">필터</span>
+                      <span class="ui-tool">정렬</span>
+                    </div>
+                    <div class="ui-tb mt-2.5">
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-th"><span class="n-ico-title">Aa</span>업무</div>
+                        <div class="ui-th"><span class="n-ico-status"></span>상태</div>
+                      </div>
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-td">촬영 일정 확정</div>
+                        <div class="ui-td"><span class="ui-tag bg-ochre">진행 중</span></div>
+                      </div>
+                      <div class="ui-tr ui-tr-2">
+                        <div class="ui-td">예산안 검토</div>
+                        <div class="ui-td"><span class="ui-tag bg-peach">완료</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption class="shot-cap">보기 · 필터 · 정렬이 함께 붙습니다</figcaption>
+              </figure>
+            </div>
+
+          </div>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd kbd-solid">데이터베이스 표</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">속성 · 보기 전환 · 필터 · 정렬 가능</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">일반 표</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">칸만 있는 표. 나중에 바꾸려면 다시 만들어야 합니다</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step">
+        <div class="step-n">STEP 02</div>
+        <div>
+          <h3 class="t-card-title text-ink">업무 다섯 줄을 먼저 채웁니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            속성을 설계하기 전에 실제 업무 이름을 다섯 개 적습니다.
+            빈 표를 놓고 어떤 항목이 필요할지 고민하면 진도가 나가지 않습니다.
+            내용을 먼저 넣으면 필요한 속성이 저절로 보입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step">
+        <div class="step-n">STEP 03</div>
+        <div>
+          <h3 class="t-card-title text-ink">속성을 세 개만 추가합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            표 오른쪽 끝 더하기를 눌러 속성을 추가하고, 각각 유형을 지정합니다.
+            유형을 맞춰야 나중에 보기 전환이 제대로 걸립니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">속성 추가</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-menu">
+                  <div class="ui-menu-cap">속성 유형</div>
+                  <div class="ui-item"><span class="ui-ico">Aa</span><span class="ui-item-name">텍스트</span></div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico"><span class="n-ico-person"></span></span>
+                    <span class="ui-item-name">사람</span>
+                    <span class="ui-item-desc">담당자</span>
+                  </div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico">날짜</span>
+                    <span class="ui-item-name">날짜</span>
+                    <span class="ui-item-desc">마감일</span>
+                  </div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico"><span class="n-ico-status"></span></span>
+                    <span class="ui-item-name">선택</span>
+                    <span class="ui-item-desc">상태</span>
+                  </div>
+                  <div class="ui-item"><span class="ui-ico">＃</span><span class="ui-item-name">숫자</span></div>
+                  <div class="ui-item"><span class="ui-ico">✓</span><span class="ui-item-name">체크박스</span></div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">표시된 세 가지를 이번 단계에서 씁니다</figcaption>
+          </figure>
+
+          <div class="mt-6">
+            <div class="sk-r">
+              <span class="kbd">담당자</span>
+              <span class="t-body text-bodytext">사람 유형 · 나중에 내 업무만 걸러볼 때 씁니다</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">마감일</span>
+              <span class="t-body text-bodytext">날짜 유형 · 캘린더 보기의 기준이 됩니다</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">상태</span>
+              <span class="t-body text-bodytext">선택 유형 · 할 일, 진행 중, 완료 세 개만 만듭니다</span>
+            </div>
+          </div>
+
+          <p class="t-cap text-muted mt-4">상태 값을 다섯 개 넘게 만들면 보드가 가로로 늘어져 읽기 어려워집니다</p>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step">
+        <div class="step-n">STEP 04</div>
+        <div>
+          <h3 class="t-card-title text-ink">보기를 추가합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            표 왼쪽 위 보기 이름 옆 더하기를 누르면 보기를 추가할 수 있습니다.
+            보드를 고르고 그룹 기준을 상태로, 캘린더를 고르고 기준 날짜를 마감일로 지정합니다.
+            데이터를 새로 넣지 않았는데 화면이 완전히 달라집니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">팀 업무 관리</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-views">
+                  <span class="ui-view ui-view-on">표</span>
+                  <span class="ui-view">＋</span>
+                </div>
+
+                <div class="ui-menu">
+                  <div class="ui-menu-cap">보기 추가</div>
+                  <div class="ui-item"><span class="ui-ico">표</span><span class="ui-item-name">표</span></div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico">보드</span>
+                    <span class="ui-item-name">보드</span>
+                    <span class="ui-item-desc">상태로 묶기</span>
+                  </div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico">달력</span>
+                    <span class="ui-item-name">캘린더</span>
+                    <span class="ui-item-desc">마감일 기준</span>
+                  </div>
+                  <div class="ui-item"><span class="ui-ico">목록</span><span class="ui-item-name">리스트</span></div>
+                  <div class="ui-item"><span class="ui-ico">갤러리</span><span class="ui-item-name">갤러리</span></div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">보기를 추가해도 데이터는 한 벌 그대로입니다</figcaption>
+          </figure>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd">보드 보기</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">상태로 묶기 · 지금 무엇이 밀려 있는지 봅니다</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">캘린더 보기</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">마감일 기준 · 언제 몰려 있는지 봅니다</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 05 -->
+      <div class="step">
+        <div class="step-n">STEP 05</div>
+        <div>
+          <h3 class="t-card-title text-ink">내 것만 걸러봅니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            보기 오른쪽 위 필터에서 담당자가 나인 것만 남깁니다.
+            필터와 정렬은 그 보기에만 걸립니다. 다른 보기에서는 여전히 전체가 보입니다.
+            숨긴 것이지 지운 것이 아니라는 점이 중요합니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 자주 막히는 지점 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">여기서 자주 막힙니다</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">보기를 바꿨더니 내용이 사라진 것 같아요</h3>
+        <p class="t-body text-bodytext mt-3">
+          필터가 걸린 보기이거나, 그룹 기준 속성이 비어 있는 경우입니다.
+          필터를 해제하면 다시 보입니다. 보기를 바꾼다고 데이터가 지워지지는 않습니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">업무 종류마다 표를 따로 만들었어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          표를 나눌 일이 아니라 속성 하나를 늘릴 일인 경우가 대부분입니다.
+          하나로 모으고 분류 속성으로 나눠야 보기 전환과 필터가 힘을 씁니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">엑셀처럼 칸에 수식을 넣으려 했어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          노션의 계산은 칸이 아니라 속성 단위로 걸립니다.
+          한 줄에만 계산식을 넣는 방식은 없고, 수식 속성을 만들면 모든 줄에 같은 규칙이 적용됩니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 완료 체크 · 다음 단계 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">다 했는지 확인하기</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          네 번째 항목이 이 단계의 <br class="hidden md:block">진짜 통과 기준입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">데이터베이스 표를 만들고 업무를 다섯 줄 넣었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">담당자·마감일·상태 속성을 추가했습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">보드와 캘린더 보기를 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">보기를 바꿔도 원래 데이터는 그대로라는 것을 확인했습니다</p></div>
+      </div>
+
+    </div>
+
+    <div class="pager mt-16">
+      <a href="level-2.html" class="pager-card">
+        <div class="t-cap text-muted">이전 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 2 · 백지에서 시작하지 않기</div>
+      </a>
+      <a href="level-4.html" class="pager-card pager-r">
+        <div class="t-cap text-muted">다음 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 4 · 팀과 함께 쓰기</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 푸터 ══════════════ -->
+<footer class="bg-soft">
+  <div class="shell py-20">
+
+    <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+
+      <div>
+        <div class="t-cap text-muted">학습</div>
+        <ul class="f-list">
+          <li><a href="index.html#path" class="t-body text-bodytext">전체 학습 경로</a></li>
+          <li><a href="level-1.html" class="t-body text-bodytext">기초 블록 다루기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">데이터베이스 입문</a></li>
+          <li><a href="level-4.html" class="t-body text-bodytext">협업과 권한 설정</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">자료실</div>
+        <ul class="f-list">
+          <li><a href="level-5.html" class="t-body text-bodytext">업무 구조 설계하기</a></li>
+          <li><a href="level-1.html#shortcut" class="t-body text-bodytext">단축 입력 정리표</a></li>
+          <li><a href="index.html#how" class="t-body text-bodytext">학습 방식 안내</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">자주 묻는 질문</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">단계별로 보기</div>
+        <ul class="f-list">
+          <li><a href="level-1.html" class="t-body text-bodytext">레벨 1 · 손이 먼저 익숙해지기</a></li>
+          <li><a href="level-2.html" class="t-body text-bodytext">레벨 2 · 백지에서 시작하지 않기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">레벨 3 · 데이터베이스라는 발상</a></li>
+          <li><a href="level-5.html" class="t-body text-bodytext">레벨 5 · 내 업무에 맞게 설계하기</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">스터디 노션</div>
+        <ul class="f-list">
+          <li><a href="index.html#who" class="t-body text-bodytext">이런 분께 맞습니다</a></li>
+          <li><a href="index.html#why" class="t-body text-bodytext">왜 어려울까</a></li>
+          <li><a href="index.html#try" class="t-body text-bodytext">데이터베이스 체험</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">노션 계정 만들기 안내</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="t-cap text-muted f-copy">
+      © 2026 스터디 노션. 이 사이트는 노션 학습을 돕는 비공식 교육 자료입니다.
+      노션(Notion)은 Notion Labs, Inc.의 상표입니다.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

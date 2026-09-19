@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>레벨 4 · 팀과 함께 쓰기 - Study Notion</title>
+<meta name="description" content="네 가지 권한 등급과 하위 페이지 권한 상속, 댓글과 멘션으로 팀과 노션을 함께 쓰는 15분 실습.">
+
+<!-- 한글 글리프 포함 폰트 (Inter 사용 금지) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas:   '#fffaf0',
+          soft:     '#faf5e8',
+          cream:    '#f5f0e0',
+          ink:      '#0a0a0a',
+          bodytext: '#3a3a3a',
+          muted:    '#6a6a6a',
+          hairline: '#e5e5e5',
+          pink:     '#ff4d8b',
+          teal:     '#1a3a3a',
+          lavender: '#b8a4ed',
+          peach:    '#ffb084',
+          ochre:    '#e8b94a'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-canvas">
+
+<!-- ══════════════ 상단 네비 ══════════════ -->
+<header class="bg-canvas border-b border-hairline">
+  <div class="shell">
+    <nav class="h-16 flex items-center justify-between">
+      <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html#why" class="nav-link">왜 어려울까</a></li>
+        <li><a href="index.html#path" class="nav-link">학습 경로</a></li>
+        <li><a href="index.html#try" class="nav-link">직접 해보기</a></li>
+      </ul>
+
+      <a href="index.html#path" class="btn btn-primary btn-sm">전체 경로 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════ 레벨 머리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <div class="crumb">
+      <a href="index.html">홈</a>
+      <span class="crumb-sep">/</span>
+      <a href="index.html#path">학습 경로</a>
+      <span class="crumb-sep">/</span>
+      <span class="text-ink">레벨 4</span>
+    </div>
+
+    <div class="lv-hero bg-lavender mt-6">
+      <span class="pill bg-cream text-ink">LEVEL 4</span>
+
+      <h1 class="t-h1 text-ink mt-6">팀과 <br class="hidden md:block">함께 쓰기</h1>
+
+      <p class="t-body text-ink mt-6 op-76 lede-520">
+        혼자 쓰던 페이지를 열어주는 순간 <br class="hidden md:block">권한이라는 문제가 생깁니다.
+      </p>
+
+      <div class="lv-hero-meta">
+        <span class="pill bg-cream text-ink">15분</span>
+        <span class="pill bg-cream text-ink">중급</span>
+        <span class="pill bg-cream text-ink">앞 단계 · 레벨 3</span>
+      </div>
+
+      <div class="prog">
+        <div class="prog-track prog-track-dark"><div class="prog-fill prog-fill-dark" style="width:80%"></div></div>
+        <span class="t-cap text-ink op-76">4 / 5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 이 단계를 마치면 ══════════════ -->
+<section class="bg-canvas">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">이 단계를 마치면</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          잘못 열어서 생기는 사고를 <br class="hidden md:block">미리 막는 단계입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="goal">
+          <span class="goal-mark">1</span>
+          <p class="t-body text-bodytext">네 가지 권한 등급을 구분해서 줄 수 있습니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">2</span>
+          <p class="t-body text-bodytext">상위 페이지 권한이 하위로 내려간다는 것을 압니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">3</span>
+          <p class="t-body text-bodytext">댓글과 멘션으로 문서 안에서 일이 굴러가게 합니다</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 실습 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">따라 해봅니다</h2>
+    <p class="t-body text-muted mt-5 lede-560">
+      레벨 3에서 만든 업무 데이터베이스를 <br class="hidden md:block">동료 한 명에게 열어주는 것으로 시작합니다.
+    </p>
+
+    <div class="mt-12">
+
+      <!-- STEP 01 -->
+      <div class="step">
+        <div class="step-n">STEP 01</div>
+        <div>
+          <h3 class="t-card-title text-ink">이 문서가 어디에 있어야 하는지 먼저 봅니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            개인 페이지에 두고 한 명씩 초대할 것인지, 팀이 공유하는 공간에 둘 것인지를 먼저 정합니다.
+            혼자 만든 페이지를 계속 개인 공간에 두고 초대만 늘리면, 나중에 담당자가 바뀔 때
+            문서 주인을 찾지 못해 멈춥니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step">
+        <div class="step-n">STEP 02</div>
+        <div>
+          <h3 class="t-card-title text-ink">권한 등급을 골라서 초대합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            페이지 오른쪽 위 공유를 누르고 이메일로 초대하면서 등급을 고릅니다.
+            기본값으로 두지 말고, 그 사람이 실제로 해야 하는 일에 맞춰 내려서 줍니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">공유</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-person">
+                  <span class="av av-1">김</span>
+                  <span class="t-cap text-ink">김하늘</span>
+                  <span class="ui-role ui-role-open">편집 허용 <span class="ui-chev">▾</span></span>
+                </div>
+                <div class="ui-person">
+                  <span class="av av-2">이</span>
+                  <span class="t-cap text-ink">이도윤</span>
+                  <span class="ui-role">댓글 허용 <span class="ui-chev">▾</span></span>
+                </div>
+
+                <div class="ui-menu">
+                  <div class="ui-item">
+                    <span class="ui-item-name">전체 허용</span>
+                    <span class="ui-item-desc">수정 + 초대</span>
+                  </div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-item-name">편집 허용</span>
+                    <span class="ui-item-desc">수정만</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-item-name">댓글 허용</span>
+                    <span class="ui-item-desc">읽기 + 의견</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-item-name">읽기 허용</span>
+                    <span class="ui-item-desc">보기만</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">기본값으로 두지 말고 필요한 만큼만 내려서 줍니다</figcaption>
+          </figure>
+
+          <div class="mt-6">
+            <div class="sk-r">
+              <span class="kbd">전체 허용</span>
+              <span class="t-body text-bodytext">내용 수정과 다른 사람 초대까지 가능 · 공동 운영자에게만</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">편집 허용</span>
+              <span class="t-body text-bodytext">내용을 고칠 수 있지만 초대는 못 함 · 같이 작성하는 팀원</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">댓글 허용</span>
+              <span class="t-body text-bodytext">읽고 의견만 남김 · 검토자, 승인자</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">읽기 허용</span>
+              <span class="t-body text-bodytext">보기만 가능 · 참고로 공유받는 사람</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step">
+        <div class="step-n">STEP 03</div>
+        <div>
+          <h3 class="t-card-title text-ink">하위 페이지까지 같이 열렸는지 확인합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            페이지 권한은 그 안에 든 하위 페이지로 함께 내려갑니다.
+            상위 페이지를 열어주면 그 아래 모든 문서가 같이 열린다는 뜻입니다.
+            공유하기 전에 그 안에 무엇이 들어 있는지 한 번 펼쳐보는 습관이 사고를 막습니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="t-cap text-muted">팀 업무 홈</span>
+              <span class="to">›</span>
+              <span class="t-cap text-bodytext">회의록 · 진행 중 업무 · 인사 관련 메모</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd kbd-solid">상위를 열면</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">아래 세 개가 함께 열립니다</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step">
+        <div class="step-n">STEP 04</div>
+        <div>
+          <h3 class="t-card-title text-ink">댓글과 멘션으로 주고받습니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            고쳐달라는 말을 메신저로 보내면 문서와 대화가 갈라집니다.
+            해당 블록에 댓글을 달고 사람을 멘션하면 맥락이 문서에 남습니다.
+            멘션된 사람에게는 알림이 갑니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd">@이름</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">사람 부르기 · 알림이 갑니다</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">@페이지 이름</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">다른 페이지를 문장 안에 연결</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">텍스트 선택 후 댓글</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">그 문장에 붙는 의견</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 05 -->
+      <div class="step">
+        <div class="step-n">STEP 05</div>
+        <div>
+          <h3 class="t-card-title text-ink">외부로 내보낼 때만 웹 게시를 씁니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            공유 메뉴에서 웹 게시를 켜면 계정이 없는 사람도 링크로 볼 수 있습니다.
+            사내 문서에는 쓰지 않는 편이 안전합니다. 링크를 받은 누구나 볼 수 있기 때문입니다.
+            검색 엔진 노출과 복제 허용 같은 세부 설정은 요금제에 따라 제공 범위가 다릅니다.
+          </p>
+          <p class="t-cap text-muted mt-4">
+            행사 안내처럼 밖에 내보내는 문서에만 켜고, 끝나면 다시 끕니다
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 자주 막히는 지점 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">여기서 자주 막힙니다</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">공유했는데 상대가 못 본다고 해요</h3>
+        <p class="t-body text-bodytext mt-3">
+          링크만 복사해 보낸 경우입니다. 링크는 주소일 뿐 권한이 아닙니다.
+          공유 목록에 그 사람이 들어가 있는지 먼저 확인합니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">보여주면 안 되는 문서가 같이 열렸어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          권한이 하위로 내려가기 때문입니다. 민감한 문서는 공유하는 페이지 바깥으로
+          먼저 옮기고, 그다음에 상위 페이지를 엽니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">누가 언제 고쳤는지 모르겠어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          페이지 오른쪽 위에서 최근 편집 기록을 볼 수 있습니다.
+          되돌리기가 필요한 수준이라면 편집 허용이 너무 넓게 열린 것은 아닌지 함께 봅니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 완료 체크 · 다음 단계 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">다 했는지 확인하기</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          열어주는 것보다 <br class="hidden md:block">무엇이 같이 열리는지가 중요합니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">동료 한 명을 권한 등급을 골라 초대했습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">하위 페이지까지 함께 열린다는 것을 확인했습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">블록에 댓글을 달고 사람을 멘션해봤습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">웹 게시는 어떤 문서에만 쓸지 정했습니다</p></div>
+      </div>
+
+    </div>
+
+    <div class="pager mt-16">
+      <a href="level-3.html" class="pager-card">
+        <div class="t-cap text-muted">이전 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 3 · 데이터베이스라는 발상</div>
+      </a>
+      <a href="level-5.html" class="pager-card pager-r">
+        <div class="t-cap text-muted">다음 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 5 · 내 업무에 맞게 설계하기</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 푸터 ══════════════ -->
+<footer class="bg-soft">
+  <div class="shell py-20">
+
+    <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+
+      <div>
+        <div class="t-cap text-muted">학습</div>
+        <ul class="f-list">
+          <li><a href="index.html#path" class="t-body text-bodytext">전체 학습 경로</a></li>
+          <li><a href="level-1.html" class="t-body text-bodytext">기초 블록 다루기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">데이터베이스 입문</a></li>
+          <li><a href="level-4.html" class="t-body text-bodytext">협업과 권한 설정</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">자료실</div>
+        <ul class="f-list">
+          <li><a href="level-5.html" class="t-body text-bodytext">업무 구조 설계하기</a></li>
+          <li><a href="level-1.html#shortcut" class="t-body text-bodytext">단축 입력 정리표</a></li>
+          <li><a href="index.html#how" class="t-body text-bodytext">학습 방식 안내</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">자주 묻는 질문</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">단계별로 보기</div>
+        <ul class="f-list">
+          <li><a href="level-1.html" class="t-body text-bodytext">레벨 1 · 손이 먼저 익숙해지기</a></li>
+          <li><a href="level-2.html" class="t-body text-bodytext">레벨 2 · 백지에서 시작하지 않기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">레벨 3 · 데이터베이스라는 발상</a></li>
+          <li><a href="level-5.html" class="t-body text-bodytext">레벨 5 · 내 업무에 맞게 설계하기</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">스터디 노션</div>
+        <ul class="f-list">
+          <li><a href="index.html#who" class="t-body text-bodytext">이런 분께 맞습니다</a></li>
+          <li><a href="index.html#why" class="t-body text-bodytext">왜 어려울까</a></li>
+          <li><a href="index.html#try" class="t-body text-bodytext">데이터베이스 체험</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">노션 계정 만들기 안내</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="t-cap text-muted f-copy">
+      © 2026 스터디 노션. 이 사이트는 노션 학습을 돕는 비공식 교육 자료입니다.
+      노션(Notion)은 Notion Labs, Inc.의 상표입니다.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

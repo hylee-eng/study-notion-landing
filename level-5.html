@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>레벨 5 · 내 업무에 맞게 설계하기 - Study Notion</title>
+<meta name="description" content="관계형과 롤업으로 데이터베이스를 잇고 템플릿으로 반복을 줄이는 20분 실습. 학습 경로의 마지막 단계.">
+
+<!-- 한글 글리프 포함 폰트 (Inter 사용 금지) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas:   '#fffaf0',
+          soft:     '#faf5e8',
+          cream:    '#f5f0e0',
+          ink:      '#0a0a0a',
+          bodytext: '#3a3a3a',
+          muted:    '#6a6a6a',
+          hairline: '#e5e5e5',
+          pink:     '#ff4d8b',
+          teal:     '#1a3a3a',
+          lavender: '#b8a4ed',
+          peach:    '#ffb084',
+          ochre:    '#e8b94a'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-canvas">
+
+<!-- ══════════════ 상단 네비 ══════════════ -->
+<header class="bg-canvas border-b border-hairline">
+  <div class="shell">
+    <nav class="h-16 flex items-center justify-between">
+      <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html#why" class="nav-link">왜 어려울까</a></li>
+        <li><a href="index.html#path" class="nav-link">학습 경로</a></li>
+        <li><a href="index.html#try" class="nav-link">직접 해보기</a></li>
+      </ul>
+
+      <a href="index.html#path" class="btn btn-primary btn-sm">전체 경로 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════ 레벨 머리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <div class="crumb">
+      <a href="index.html">홈</a>
+      <span class="crumb-sep">/</span>
+      <a href="index.html#path">학습 경로</a>
+      <span class="crumb-sep">/</span>
+      <span class="text-ink">레벨 5</span>
+    </div>
+
+    <div class="lv-hero bg-ochre mt-6">
+      <span class="pill bg-cream text-ink">LEVEL 5</span>
+
+      <h1 class="t-h1 text-ink mt-6">내 업무에 맞게 <br class="hidden md:block">설계하기</h1>
+
+      <p class="t-body text-ink mt-6 op-78 lede-520">
+        흩어진 페이지를 이어 붙여 <br class="hidden md:block">한 화면에서 굴러가게 만듭니다.
+      </p>
+
+      <div class="lv-hero-meta">
+        <span class="pill bg-cream text-ink">20분</span>
+        <span class="pill bg-cream text-ink">중급</span>
+        <span class="pill bg-cream text-ink">앞 단계 · 레벨 4</span>
+      </div>
+
+      <div class="prog">
+        <div class="prog-track prog-track-dark"><div class="prog-fill prog-fill-dark" style="width:100%"></div></div>
+        <span class="t-cap text-ink op-78">5 / 5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 상자와 물건 비유 ══════════════ -->
+<section class="bg-canvas">
+  <div class="shell">
+    <div class="card-sat bg-cream">
+
+      <span class="pill bg-ink text-canvas">먼저 그림으로</span>
+
+      <h2 class="t-h3 mt-5">관계형과 롤업은 <br class="hidden md:block">상자와 물건으로 생각하면 쉽습니다</h2>
+
+      <p class="t-body text-bodytext mt-4 lede-640">
+        프로젝트는 상자, 업무는 그 안에 들어가는 물건입니다.
+        관계형은 물건마다 어느 상자에 속하는지 이름표를 붙이는 일이고,
+        롤업은 상자를 열어보지 않아도 겉면에 개수와 진행률이 저절로 적히는 일입니다.
+      </p>
+
+      <div class="anal">
+
+        <div>
+          <div class="anal-cap">관계형 · 물건에 이름표를 붙입니다</div>
+          <div class="anal-card">촬영 일정 확정 <span class="anal-tag">3월 캠페인</span></div>
+          <div class="anal-card">예산안 검토 <span class="anal-tag">3월 캠페인</span></div>
+          <div class="anal-card">최종 보고서 작성 <span class="anal-tag">상반기 결산</span></div>
+        </div>
+
+        <div class="anal-arrow">
+          <span class="anal-ar-v">↓</span><span class="anal-ar-h">→</span>
+        </div>
+
+        <div>
+          <div class="anal-cap">롤업 · 상자 겉면에 저절로 적힙니다</div>
+          <div class="anal-box">
+            <div class="anal-box-name">3월 캠페인</div>
+            <div class="anal-sum">
+              <span class="anal-sum-item">업무 5건</span>
+              <span class="anal-sum-item">완료 60%</span>
+              <span class="anal-sum-item">마감 3월 20일</span>
+            </div>
+          </div>
+          <p class="anal-note">이름표가 바뀌면 겉면 숫자도 따라 바뀝니다</p>
+        </div>
+
+      </div>
+
+      <p class="t-body text-bodytext mt-10 lede-640">
+        이름이 비슷해 헷갈리지만 하는 일이 다릅니다.
+        관계형은 잇는 일이고, 롤업은 이어진 것을 세는 일입니다.
+        순서도 정해져 있습니다. 먼저 잇고, 그다음에 셉니다.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 이 단계를 마치면 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">이 단계를 마치면</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          기능을 더 배우는 단계가 아니라 <br class="hidden md:block">지금까지 만든 것을 잇는 단계입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="goal">
+          <span class="goal-mark">1</span>
+          <p class="t-body text-bodytext">데이터베이스 두 개를 관계형으로 연결합니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">2</span>
+          <p class="t-body text-bodytext">롤업으로 진행 상황을 자동으로 셉니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">3</span>
+          <p class="t-body text-bodytext">반복되는 문서를 템플릿으로 만들어 둡니다</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 실습 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">따라 해봅니다</h2>
+    <p class="t-body text-muted mt-5 lede-560">
+      레벨 3의 업무 데이터베이스가 있어야 합니다. <br class="hidden md:block">여기에 상위 개념 하나를 붙입니다.
+    </p>
+
+    <div class="mt-12">
+
+      <!-- STEP 01 -->
+      <div class="step">
+        <div class="step-n">STEP 01</div>
+        <div>
+          <h3 class="t-card-title text-ink">업무를 명사로 적어봅니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            내 일에서 반복되는 덩어리를 명사로 적습니다.
+            여기서 여러 개가 하나에 속하는 관계가 보이면, 그 둘이 연결할 대상입니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd kbd-solid">프로젝트</span>
+              <span class="to">›</span>
+              <span class="t-cap text-bodytext">여러 업무가 이 아래 붙습니다</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">업무</span>
+              <span class="to">›</span>
+              <span class="t-cap text-bodytext">레벨 3에서 만든 데이터베이스</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">회의록</span>
+              <span class="to">›</span>
+              <span class="t-cap text-bodytext">특정 프로젝트에 속하는 기록</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step">
+        <div class="step-n">STEP 02</div>
+        <div>
+          <h3 class="t-card-title text-ink">상위 데이터베이스를 하나 만듭니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            프로젝트 데이터베이스를 새로 만들고 진행 중인 것 서너 개를 적습니다.
+            속성은 기간과 상태 정도로 충분합니다. 지금 단계에서 속성을 늘리면 다음 단계가 복잡해집니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step">
+        <div class="step-n">STEP 03</div>
+        <div>
+          <h3 class="t-card-title text-ink">관계형으로 잇습니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            업무 데이터베이스에 속성을 추가하고 유형을 관계형으로 고른 뒤 프로젝트를 지정합니다.
+            이제 업무 한 줄마다 소속 프로젝트를 고를 수 있습니다.
+            양쪽에 모두 표시하는 설정을 켜면 프로젝트 쪽에서도 어떤 업무가 붙어 있는지 보입니다.
+            앞의 비유로 치면 물건에 이름표를 붙이는 단계입니다.
+          </p>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="t-cap text-bodytext">촬영 일정 확정</span>
+              <span class="to">→</span>
+              <span class="kbd">3월 캠페인</span>
+            </div>
+            <div class="demo-line">
+              <span class="t-cap text-bodytext">예산안 검토</span>
+              <span class="to">→</span>
+              <span class="kbd">3월 캠페인</span>
+            </div>
+            <div class="demo-line">
+              <span class="t-cap text-bodytext">최종 보고서 작성</span>
+              <span class="to">→</span>
+              <span class="kbd">상반기 결산</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step">
+        <div class="step-n">STEP 04</div>
+        <div>
+          <h3 class="t-card-title text-ink">롤업으로 세지 않고 보게 합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            프로젝트 데이터베이스에 속성을 추가하고 유형을 롤업으로 고릅니다.
+            방금 만든 관계형을 선택하고, 무엇을 계산할지 지정합니다.
+            업무를 하나 더 넣을 때마다 숫자가 알아서 바뀝니다.
+            상자 겉면에 숫자가 적히는 단계이고, 손으로 세던 일이 사라지는 지점입니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">프로젝트</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-tb">
+                  <div class="ui-tr ui-tr-4">
+                    <div class="ui-th"><span class="n-ico-title">Aa</span>프로젝트</div>
+                    <div class="ui-th"><span class="ui-rollup">롤업</span></div>
+                    <div class="ui-th"><span class="ui-rollup">롤업</span></div>
+                    <div class="ui-th">기간</div>
+                  </div>
+                  <div class="ui-tr ui-tr-4">
+                    <div class="ui-td">3월 캠페인</div>
+                    <div class="ui-td ui-num">5건</div>
+                    <div class="ui-td"><span class="ui-meter"><i style="width:60%"></i></span><span class="ui-num">60%</span></div>
+                    <div class="ui-td ui-num">3월 20일</div>
+                  </div>
+                  <div class="ui-tr ui-tr-4">
+                    <div class="ui-td">상반기 결산</div>
+                    <div class="ui-td ui-num">3건</div>
+                    <div class="ui-td"><span class="ui-meter"><i style="width:33%"></i></span><span class="ui-num">33%</span></div>
+                    <div class="ui-td ui-num">3월 26일</div>
+                  </div>
+                  <div class="ui-tr ui-tr-4">
+                    <div class="ui-td">신규 제안</div>
+                    <div class="ui-td ui-num">2건</div>
+                    <div class="ui-td"><span class="ui-meter"><i style="width:0%"></i></span><span class="ui-num">0%</span></div>
+                    <div class="ui-td ui-num">4월 3일</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">업무를 하나 더 연결하면 건수와 비율이 알아서 바뀝니다</figcaption>
+          </figure>
+
+          <div class="mt-6">
+            <div class="sk-r">
+              <span class="kbd">개수</span>
+              <span class="t-body text-bodytext">이 프로젝트에 붙은 업무가 몇 건인지</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">완료 비율</span>
+              <span class="t-body text-bodytext">상태가 완료인 업무의 비율</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">가장 늦은 날짜</span>
+              <span class="t-body text-bodytext">마감일 중 가장 뒤에 있는 날</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 05 -->
+      <div class="step">
+        <div class="step-n">STEP 05</div>
+        <div>
+          <h3 class="t-card-title text-ink">반복되는 문서는 템플릿으로 굳힙니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            회의록처럼 매번 같은 틀로 쓰는 문서는 데이터베이스 템플릿으로 만들어 둡니다.
+            새로 만들기 버튼 옆 화살표에서 템플릿을 추가하면, 다음부터는 한 번 눌러 빈 양식이 열립니다.
+            매번 무엇을 적을지 다시 정하지 않아도 됩니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- STEP 06 -->
+      <div class="step">
+        <div class="step-n">STEP 06</div>
+        <div>
+          <h3 class="t-card-title text-ink">매일 여는 화면 하나를 정합니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            마지막은 기능이 아닙니다. 아침에 여는 페이지를 하나 정하고 거기에
+            오늘 할 업무 보기와 프로젝트 현황만 올립니다.
+            여러 페이지를 오가야 하면 아무리 잘 만들어도 쓰지 않게 됩니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 자주 막히는 지점 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">여기서 자주 막힙니다</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">속성을 열 개 넘게 만들었어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          채워야 할 칸이 많으면 기록 자체를 건너뛰게 됩니다.
+          한 달 동안 한 번도 안 채운 속성은 지웁니다. 지워도 다른 속성은 그대로입니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">롤업이 비어 있어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          롤업은 관계형을 통해서만 값을 가져옵니다. 관계형이 연결되지 않은 줄은
+          계산할 대상이 없어 비어 있는 것이 정상입니다. 먼저 연결부터 확인합니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">잘 만들었는데 안 쓰게 돼요</h3>
+        <p class="t-body text-bodytext mt-3">
+          기록하는 곳과 확인하는 곳이 떨어져 있을 때 생깁니다.
+          매일 여는 화면에서 바로 추가할 수 있어야 손이 갑니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 완료 체크 · 마무리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">다 했는지 확인하기</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          다섯 단계를 모두 지나왔습니다. <br class="hidden md:block">마지막은 쓰는 습관입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">프로젝트 데이터베이스를 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">업무와 프로젝트를 관계형으로 연결했습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">롤업으로 진행 상황이 자동으로 세어지게 했습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">반복 문서를 템플릿으로 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">매일 여는 화면을 하나 정했습니다</p></div>
+      </div>
+
+    </div>
+
+    <div class="bg-soft text-center cta-band mt-16">
+      <h3 class="t-h3">다섯 단계를 모두 마쳤습니다</h3>
+      <p class="t-body text-muted mt-4">
+        이제 남은 것은 기능이 아니라 한 주를 실제로 써보는 일입니다. <br class="hidden md:block">막히는 단계가 있으면 그 단계만 다시 펴보세요.
+      </p>
+      <div class="mt-8">
+        <a href="index.html#path" class="btn btn-primary">전체 경로 다시 보기</a>
+      </div>
+    </div>
+
+    <div class="pager mt-10">
+      <a href="level-4.html" class="pager-card">
+        <div class="t-cap text-muted">이전 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 4 · 팀과 함께 쓰기</div>
+      </a>
+      <div class="pager-card pager-off pager-r">
+        <div class="t-cap text-muted">다음 단계</div>
+        <div class="t-card-title text-ink mt-1.5">마지막 단계입니다</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 푸터 ══════════════ -->
+<footer class="bg-soft">
+  <div class="shell py-20">
+
+    <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+
+      <div>
+        <div class="t-cap text-muted">학습</div>
+        <ul class="f-list">
+          <li><a href="index.html#path" class="t-body text-bodytext">전체 학습 경로</a></li>
+          <li><a href="level-1.html" class="t-body text-bodytext">기초 블록 다루기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">데이터베이스 입문</a></li>
+          <li><a href="level-4.html" class="t-body text-bodytext">협업과 권한 설정</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">자료실</div>
+        <ul class="f-list">
+          <li><a href="level-5.html" class="t-body text-bodytext">업무 구조 설계하기</a></li>
+          <li><a href="level-1.html#shortcut" class="t-body text-bodytext">단축 입력 정리표</a></li>
+          <li><a href="index.html#how" class="t-body text-bodytext">학습 방식 안내</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">자주 묻는 질문</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">단계별로 보기</div>
+        <ul class="f-list">
+          <li><a href="level-1.html" class="t-body text-bodytext">레벨 1 · 손이 먼저 익숙해지기</a></li>
+          <li><a href="level-2.html" class="t-body text-bodytext">레벨 2 · 백지에서 시작하지 않기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">레벨 3 · 데이터베이스라는 발상</a></li>
+          <li><a href="level-5.html" class="t-body text-bodytext">레벨 5 · 내 업무에 맞게 설계하기</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">스터디 노션</div>
+        <ul class="f-list">
+          <li><a href="index.html#who" class="t-body text-bodytext">이런 분께 맞습니다</a></li>
+          <li><a href="index.html#why" class="t-body text-bodytext">왜 어려울까</a></li>
+          <li><a href="index.html#try" class="t-body text-bodytext">데이터베이스 체험</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">노션 계정 만들기 안내</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="t-cap text-muted f-copy">
+      © 2026 스터디 노션. 이 사이트는 노션 학습을 돕는 비공식 교육 자료입니다.
+      노션(Notion)은 Notion Labs, Inc.의 상표입니다.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

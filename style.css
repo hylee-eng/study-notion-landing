@@ -155,3 +155,235 @@ body {
 .col-body { margin-top:14px; }
 .push-right { margin-left:auto; }
 
+
+/* ══════════════════════════════════════════════════════════
+   레벨 상세 페이지 (level-1.html ~ level-5.html 공용)
+   ══════════════════════════════════════════════════════════ */
+
+/* 경로 표시 (브레드크럼) */
+.crumb { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:500; color:#6a6a6a; }
+.crumb a:hover { color:#0a0a0a; }
+.crumb-sep { opacity:.45; }
+
+/* 레벨 머리 카드 */
+.lv-hero { border-radius:24px; padding:36px 28px; }
+@media (min-width:768px) { .lv-hero { padding:56px 48px; } }
+.lv-hero-meta { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:28px; }
+
+/* 진행 막대 */
+.prog { display:flex; align-items:center; gap:14px; margin-top:28px; }
+.prog-track { flex:1; height:6px; border-radius:999px; overflow:hidden; background:rgba(255,250,240,.3); }
+.prog-fill { height:100%; border-radius:999px; background:#fffaf0; }
+.prog-track-dark { background:rgba(10,10,10,.14); }
+.prog-fill-dark { background:#0a0a0a; }
+
+/* 이 단계를 마치면 (학습 목표) */
+.goal { display:flex; gap:14px; align-items:flex-start; padding:18px 0; border-top:1px solid #e5e5e5; }
+.goal:last-child { border-bottom:1px solid #e5e5e5; }
+.goal-mark { width:22px; height:22px; flex:none; margin-top:1px; border-radius:999px; background:#f5f0e0;
+             display:inline-flex; align-items:center; justify-content:center;
+             font-size:12px; font-weight:500; color:#0a0a0a; }
+
+/* 실습 단계 */
+.step { display:grid; grid-template-columns:1fr; gap:16px; padding:36px 0; border-top:1px solid #e5e5e5; }
+@media (min-width:768px) { .step { grid-template-columns:132px 1fr; gap:32px; } }
+.step-n { font-size:13px; font-weight:500; letter-spacing:.09em; color:#6a6a6a; }
+
+/* 화면 예시 상자 */
+.demo { background:#f5f0e0; border-radius:16px; padding:20px; margin-top:20px; }
+.demo-line { background:#fffaf0; border-radius:10px; padding:12px 14px; display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+.demo-line + .demo-line { margin-top:8px; }
+.kbd { display:inline-flex; align-items:center; height:28px; padding:0 10px; border-radius:8px;
+       background:#fffaf0; border:1px solid #e5e5e5; white-space:nowrap;
+       font-size:13px; font-weight:500; color:#0a0a0a; }
+.kbd-solid { background:#0a0a0a; color:#fffaf0; border-color:#0a0a0a; }
+.to { font-size:13px; color:#6a6a6a; }
+
+/* 단축 입력 표 */
+.sk-r { display:grid; grid-template-columns:132px 1fr; gap:14px; align-items:center;
+        padding:12px 0; border-top:1px solid #e5e5e5; }
+.sk-r:last-child { border-bottom:1px solid #e5e5e5; }
+
+/* 여기서 자주 막힙니다 */
+.tip { background:#faf5e8; border-radius:16px; padding:24px; height:100%; }
+.tip-mark { font-size:13px; font-weight:600; color:#ff4d8b; }
+
+/* 완료 체크 */
+.done { display:flex; gap:12px; align-items:flex-start; padding:15px 0; }
+.done + .done { border-top:1px solid #e5e5e5; }
+.done-box { width:19px; height:19px; flex:none; margin-top:2px;
+            border:1.5px solid #6a6a6a; border-radius:5px; opacity:.55; }
+
+/* 이전 · 다음 레벨 */
+.pager { display:grid; grid-template-columns:1fr; gap:16px; }
+@media (min-width:768px) { .pager { grid-template-columns:1fr 1fr; } }
+.pager-card { display:block; border:1px solid #e5e5e5; border-radius:16px; padding:24px; }
+.pager-card:hover { background:#faf5e8; }
+.pager-off { opacity:.4; }
+.pager-r { text-align:right; }
+
+/* ══════════════════════════════════════════════════════════
+   랜딩 추가 섹션
+   ══════════════════════════════════════════════════════════ */
+
+/* 학습 방식 소개 */
+.how-n { font-size:13px; font-weight:500; letter-spacing:.09em; color:#6a6a6a; }
+.how-item { padding-top:24px; border-top:1px solid #e5e5e5; }
+
+/* 이런 분께 맞습니다 */
+.aud { display:flex; gap:14px; align-items:flex-start; padding:18px 0; border-top:1px solid #e5e5e5; }
+.aud:last-child { border-bottom:1px solid #e5e5e5; }
+.aud-mark { width:22px; height:22px; flex:none; margin-top:1px; border-radius:999px;
+            display:inline-flex; align-items:center; justify-content:center;
+            font-size:12px; font-weight:500; }
+
+/* 자주 묻는 질문 (열고 닫기) */
+.faq { border-top:1px solid #e5e5e5; }
+.faq:last-of-type { border-bottom:1px solid #e5e5e5; }
+.faq > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:16px; padding:24px 0; }
+.faq > summary::-webkit-details-marker { display:none; }
+.faq-sign { margin-left:auto; flex:none; width:16px; height:16px; position:relative; opacity:.55;
+            transition:transform .15s ease; }
+.faq-sign::before, .faq-sign::after { content:''; position:absolute; background:#0a0a0a; border-radius:2px; }
+.faq-sign::before { top:7px; left:0; width:16px; height:2px; }
+.faq-sign::after  { left:7px; top:0; width:2px; height:16px; }
+.faq[open] .faq-sign { transform:rotate(45deg); }
+.faq-a { padding:0 32px 26px 0; }
+
+/* ══════════════════════════════════════════════════════════
+   화면 재현 (순수 CSS · 이미지 파일 없음)
+   Hero의 .n-* 미니 UI와 같은 방식으로, 실습 단계에서
+   무엇을 누르면 무엇이 뜨는지 보여주는 장치입니다.
+   ══════════════════════════════════════════════════════════ */
+.ui { background:#fffaf0; border:1px solid #e5e5e5; border-radius:14px; overflow:hidden; margin-top:20px; }
+.ui-bar { display:flex; align-items:center; gap:6px; padding:11px 14px; background:#faf5e8; border-bottom:1px solid #e5e5e5; }
+.ui-dot { width:9px; height:9px; flex:none; border-radius:999px; background:#e5e5e5; }
+.ui-path { margin-left:8px; font-size:12px; font-weight:500; color:#6a6a6a; }
+.ui-body { padding:22px 20px 24px; }
+.ui-title { font-size:17px; font-weight:500; letter-spacing:-0.02em; color:#0a0a0a; }
+
+/* 커서가 놓인 본문 줄 */
+.ui-line { display:flex; align-items:center; gap:1px; margin-top:16px; font-size:15px; color:#0a0a0a; }
+.ui-slash { font-weight:500; }
+.ui-caret { display:inline-block; width:1.5px; height:18px; background:#0a0a0a; }
+@media (prefers-reduced-motion: no-preference) {
+  .ui-caret { animation: ui-blink 1.1s steps(1) infinite; }
+}
+@keyframes ui-blink { 50% { opacity:0; } }
+
+/* 슬래시로 열리는 명령 목록 */
+.ui-menu { max-width:380px; margin-top:12px; padding:6px; border:1px solid #e5e5e5; border-radius:12px;
+           background:#fffaf0; box-shadow:0 8px 24px rgba(10,10,10,.07); }
+.ui-menu-cap { padding:8px 10px 6px; font-size:11px; font-weight:500; letter-spacing:.04em; color:#6a6a6a; }
+.ui-item { display:flex; align-items:center; gap:11px; padding:8px 10px; border-radius:8px; }
+.ui-item-on { background:#f5f0e0; }
+.ui-ico { width:28px; height:28px; flex:none; border-radius:7px; background:#f5f0e0;
+          display:inline-flex; align-items:center; justify-content:center;
+          font-size:12px; font-weight:500; color:#3a3a3a; }
+.ui-item-on .ui-ico { background:#fffaf0; }
+.ui-item-name { font-size:13px; font-weight:500; color:#0a0a0a; }
+.ui-item-desc { margin-left:auto; font-size:12px; color:#6a6a6a; }
+
+/* 화면 재현 - 나란히 비교 */
+.ui-two { display:grid; grid-template-columns:1fr; gap:16px; margin-top:20px; }
+@media (min-width:768px) { .ui-two { grid-template-columns:1fr 1fr; } }
+.ui-two .ui { margin-top:0; }
+.ui-label { font-size:13px; font-weight:500; color:#6a6a6a; margin-bottom:8px; }
+
+/* 화면 재현 - 본문 블록과 손잡이 */
+.ui-blk { display:flex; align-items:center; gap:8px; padding:6px 6px; border-radius:7px;
+          font-size:14px; color:#0a0a0a; }
+.ui-blk-on { background:#faf5e8; }
+.ui-handle { width:13px; height:16px; flex:none; display:grid; gap:2px; opacity:.55;
+             grid-template-columns:repeat(2,3px); grid-template-rows:repeat(3,3px);
+             align-content:center; justify-content:center; }
+.ui-handle i { display:block; width:3px; height:3px; border-radius:999px; background:#6a6a6a; }
+.ui-bul { width:4px; height:4px; flex:none; border-radius:999px; background:#6a6a6a; margin:0 5px; }
+
+/* 화면 재현 - 사이드바 페이지 목록 */
+.ui-tree-item { display:flex; align-items:center; gap:8px; padding:7px 8px; border-radius:7px;
+                font-size:13px; color:#3a3a3a; }
+.ui-tree-item + .ui-tree-item { margin-top:2px; }
+.ui-tree-on { background:#f5f0e0; color:#0a0a0a; font-weight:500; }
+.ui-tree-sub { margin-left:22px; }
+.ui-tw { width:10px; flex:none; font-size:9px; color:#6a6a6a; }
+
+/* 화면 재현 - 보기 전환 줄 */
+.ui-views { display:flex; flex-wrap:wrap; align-items:center; gap:6px; padding-bottom:10px;
+            border-bottom:1px solid #e5e5e5; }
+.ui-view { height:26px; padding:0 10px; border-radius:7px; display:inline-flex; align-items:center;
+           font-size:12px; font-weight:500; color:#6a6a6a; }
+.ui-view-on { background:#f5f0e0; color:#0a0a0a; }
+.ui-tool { font-size:12px; font-weight:500; color:#6a6a6a; }
+
+/* 화면 재현 - 작은 표 */
+.ui-tb { font-size:13px; }
+.ui-tr { display:grid; align-items:center; }
+.ui-tr-2 { grid-template-columns:1fr 104px; }
+.ui-tr-3 { grid-template-columns:1fr 92px 84px; }
+.ui-tr-4 { grid-template-columns:1fr 78px 96px 88px; }
+.ui-th { padding:8px 10px; font-size:11px; font-weight:500; color:#6a6a6a;
+         display:flex; align-items:center; gap:5px; }
+.ui-td { padding:10px; min-height:40px; display:flex; align-items:center; gap:7px;
+         border-top:1px solid #e5e5e5; color:#0a0a0a; }
+.ui-grid .ui-td { border-right:1px solid #e5e5e5; }
+.ui-grid .ui-td:last-child { border-right:0; }
+.ui-tag { display:inline-flex; align-items:center; height:22px; padding:0 9px; border-radius:999px;
+          font-size:11px; font-weight:500; color:#0a0a0a; white-space:nowrap; }
+.ui-rollup { display:inline-flex; align-items:center; height:18px; padding:0 6px; border-radius:5px;
+             background:#f5f0e0; font-size:10px; font-weight:500; color:#6a6a6a; }
+.ui-meter { width:52px; height:5px; flex:none; border-radius:999px; background:#e5e5e5; overflow:hidden; }
+.ui-meter i { display:block; height:100%; border-radius:999px; background:#1a3a3a; }
+.ui-num { font-variant-numeric:tabular-nums; }
+
+/* 화면 재현 - 공유 패널 */
+.ui-person { display:flex; align-items:center; gap:9px; padding:9px 4px; }
+.ui-person + .ui-person { border-top:1px solid #e5e5e5; }
+.ui-role { margin-left:auto; display:inline-flex; align-items:center; gap:5px; height:28px;
+           padding:0 10px; border-radius:8px; background:#f5f0e0;
+           font-size:12px; font-weight:500; color:#0a0a0a; white-space:nowrap; }
+.ui-role-open { background:#0a0a0a; color:#fffaf0; }
+.ui-chev { font-size:9px; opacity:.7; }
+
+/* ══════════════════════════════════════════════════════════
+   화면 재현과 해설의 분리
+   화면(.ui)은 노션 화면을 재현한 것이고,
+   해설(.shot-cap)은 이 사이트가 붙이는 설명입니다.
+   둘이 섞여 보이지 않도록 박스 밖으로 빼고 세로선으로 구분합니다.
+   ══════════════════════════════════════════════════════════ */
+.shot { margin-top:20px; }
+.shot .ui { margin-top:0; }
+.shot-cap { margin-top:12px; padding-left:13px; border-left:2px solid #e5e5e5;
+            font-size:13px; font-weight:500; line-height:1.5; color:#6a6a6a; }
+
+/* 나란히 놓인 화면은 높이를 맞춰 해설 줄까지 정렬합니다 */
+.ui-two > div { display:flex; flex-direction:column; }
+.ui-two .shot { flex:1; display:flex; flex-direction:column; margin-top:0; }
+.ui-two .shot .ui { flex:1; }
+.ui-two .shot-cap { margin-top:auto; padding-top:12px; }
+
+/* ══════════════════════════════════════════════════════════
+   관계형 · 롤업 비유 그림
+   ══════════════════════════════════════════════════════════ */
+.anal { display:grid; grid-template-columns:1fr; gap:16px; align-items:center; margin-top:28px; }
+@media (min-width:768px) { .anal { grid-template-columns:1fr 48px 1fr; gap:8px; } }
+.anal-cap { font-size:13px; font-weight:500; color:#6a6a6a; margin-bottom:12px; }
+.anal-arrow { display:flex; align-items:center; justify-content:center; font-size:20px; color:#6a6a6a; }
+.anal-ar-h { display:none; }
+@media (min-width:768px) { .anal-ar-h { display:inline; } .anal-ar-v { display:none; } }
+
+.anal-card { display:flex; align-items:center; gap:10px; padding:13px 15px;
+             background:#fffaf0; border:1px solid #e5e5e5; border-radius:12px;
+             font-size:14px; color:#0a0a0a; }
+.anal-card + .anal-card { margin-top:8px; }
+.anal-tag { margin-left:auto; display:inline-flex; align-items:center; height:24px; padding:0 10px;
+            border-radius:999px; background:#f5f0e0; font-size:12px; font-weight:500; color:#0a0a0a;
+            white-space:nowrap; }
+
+.anal-box { padding:20px; background:#fffaf0; border:1px solid #e5e5e5; border-radius:14px; }
+.anal-box-name { font-size:16px; font-weight:600; letter-spacing:-0.01em; color:#0a0a0a; }
+.anal-sum { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; padding-top:16px;
+            border-top:1px dashed #e5e5e5; }
+.anal-sum-item { display:inline-flex; align-items:center; gap:7px; height:30px; padding:0 12px;
+                 border-radius:999px; background:#f5f0e0; font-size:12px; font-weight:500; color:#0a0a0a; }
+.anal-note { font-size:13px; font-weight:500; color:#6a6a6a; margin-top:10px; }

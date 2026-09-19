@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>레벨 1 · 손이 먼저 익숙해지기 - Study Notion</title>
+<meta name="description" content="슬래시 명령과 단축 입력으로 노션 블록을 다루는 15분 실습. 노션을 처음 여는 분을 위한 첫 단계입니다.">
+
+<!-- 한글 글리프 포함 폰트 (Inter 사용 금지) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          canvas:   '#fffaf0',
+          soft:     '#faf5e8',
+          cream:    '#f5f0e0',
+          ink:      '#0a0a0a',
+          bodytext: '#3a3a3a',
+          muted:    '#6a6a6a',
+          hairline: '#e5e5e5',
+          pink:     '#ff4d8b',
+          teal:     '#1a3a3a',
+          lavender: '#b8a4ed',
+          peach:    '#ffb084',
+          ochre:    '#e8b94a'
+        }
+      }
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-canvas">
+
+<!-- ══════════════ 상단 네비 ══════════════ -->
+<header class="bg-canvas border-b border-hairline">
+  <div class="shell">
+    <nav class="h-16 flex items-center justify-between">
+      <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="index.html#why" class="nav-link">왜 어려울까</a></li>
+        <li><a href="index.html#path" class="nav-link">학습 경로</a></li>
+        <li><a href="index.html#try" class="nav-link">직접 해보기</a></li>
+      </ul>
+
+      <a href="index.html#path" class="btn btn-primary btn-sm">전체 경로 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════ 레벨 머리 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <div class="crumb">
+      <a href="index.html">홈</a>
+      <span class="crumb-sep">/</span>
+      <a href="index.html#path">학습 경로</a>
+      <span class="crumb-sep">/</span>
+      <span class="text-ink">레벨 1</span>
+    </div>
+
+    <div class="lv-hero bg-pink mt-6">
+      <span class="pill bg-cream text-ink">LEVEL 1</span>
+
+      <h1 class="t-h1 text-white mt-6">손이 먼저 <br class="hidden md:block">익숙해지기</h1>
+
+      <p class="t-body text-white mt-6 op-86 lede-520">
+        노션의 첫 벽은 개념이 아니라 손입니다. <br class="hidden md:block">워드에서 하던 동작이 통하지 않을 뿐입니다.
+      </p>
+
+      <div class="lv-hero-meta">
+        <span class="pill bg-cream text-ink">15분</span>
+        <span class="pill bg-cream text-ink">입문</span>
+        <span class="pill bg-cream text-ink">준비물 · 노션 계정</span>
+      </div>
+
+      <div class="prog">
+        <div class="prog-track"><div class="prog-fill" style="width:20%"></div></div>
+        <span class="t-cap text-white op-86">1 / 5</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 이 단계를 마치면 ══════════════ -->
+<section class="bg-canvas">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-8">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">이 단계를 마치면</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          외워서 되는 것이 아니라 <br class="hidden md:block">몇 번 해보면 손에 남는 것들입니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="goal">
+          <span class="goal-mark">1</span>
+          <p class="t-body text-bodytext">슬래시 하나로 원하는 블록을 꺼낼 수 있습니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">2</span>
+          <p class="t-body text-bodytext">제목·목록·체크박스를 키보드만으로 만듭니다</p>
+        </div>
+        <div class="goal">
+          <span class="goal-mark">3</span>
+          <p class="t-body text-bodytext">블록을 옮기고 지우다 실수해도 되돌릴 수 있습니다</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 실습 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">따라 해봅니다</h2>
+    <p class="t-body text-muted mt-5 lede-560">
+      읽지 말고 노션을 같이 열어두세요. <br class="hidden md:block">네 단계 모두 합쳐 15분이면 끝납니다.
+    </p>
+
+    <div class="mt-12">
+
+      <!-- STEP 01 -->
+      <div class="step">
+        <div class="step-n">STEP 01</div>
+        <div>
+          <h3 class="t-card-title text-ink">버릴 수 있는 연습장 한 장 만들기</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            왼쪽 사이드바 맨 아래 새 페이지를 누릅니다. 제목은 연습장이라고 적습니다.
+            중요한 자료로 연습하면 손이 굳습니다. 마음껏 망가뜨려도 되는 페이지가 먼저입니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="step">
+        <div class="step-n">STEP 02</div>
+        <div>
+          <h3 class="t-card-title text-ink">본문에서 슬래시를 눌러봅니다</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            제목 아래 본문을 클릭하고 슬래시를 칩니다. 넣을 수 있는 블록 목록이 그 자리에 뜹니다.
+            이어서 한글로 검색어를 치면 목록이 좁혀집니다. 무엇이 있는지 외울 필요가 없다는 뜻입니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">내 업무 홈 / 연습장</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-title">연습장</div>
+
+                <div class="ui-line">
+                  <span class="ui-slash">/</span><span class="ui-caret"></span>
+                </div>
+
+                <div class="ui-menu">
+                  <div class="ui-menu-cap">기본 블록</div>
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-ico">Aa</span>
+                    <span class="ui-item-name">텍스트</span>
+                    <span class="ui-item-desc">일반 문단</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-ico">H1</span>
+                    <span class="ui-item-name">제목 1</span>
+                    <span class="ui-item-desc">가장 큰 제목</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-ico">✓</span>
+                    <span class="ui-item-name">할 일 목록</span>
+                    <span class="ui-item-desc">체크박스</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-ico">표</span>
+                    <span class="ui-item-name">표</span>
+                    <span class="ui-item-desc">데이터베이스</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">이어서 글자를 치면 목록이 좁혀집니다</figcaption>
+          </figure>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd kbd-solid">/</span>
+              <span class="t-cap text-muted">를 누르면 블록 목록이 열립니다</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">/할 일</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">체크박스 목록</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">/제목</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">제목 1 · 2 · 3</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">/콜아웃</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">강조 상자</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="step" id="shortcut">
+        <div class="step-n">STEP 03</div>
+        <div>
+          <h3 class="t-card-title text-ink">슬래시보다 빠른 단축 입력</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            줄 맨 앞에서 아래 기호를 치고 스페이스를 누르면 블록이 바로 바뀝니다.
+            이 다섯 개만 손에 붙어도 문서 작성 속도가 달라집니다.
+          </p>
+
+          <div class="mt-6">
+            <div class="sk-r">
+              <span class="kbd">#</span>
+              <span class="t-body text-bodytext">큰 제목</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">##</span>
+              <span class="t-body text-bodytext">중간 제목</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">-</span>
+              <span class="t-body text-bodytext">글머리 기호 목록</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">1.</span>
+              <span class="t-body text-bodytext">번호 매기기 목록</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">[]</span>
+              <span class="t-body text-bodytext">체크박스</span>
+            </div>
+            <div class="sk-r">
+              <span class="kbd">&gt;</span>
+              <span class="t-body text-bodytext">토글 목록 (접었다 펴는 블록)</span>
+            </div>
+          </div>
+
+          <p class="t-cap text-muted mt-4">기호를 친 뒤 스페이스를 눌러야 바뀝니다</p>
+        </div>
+      </div>
+
+      <!-- STEP 04 -->
+      <div class="step">
+        <div class="step-n">STEP 04</div>
+        <div>
+          <h3 class="t-card-title text-ink">블록을 옮기고, 되돌리기</h3>
+          <p class="t-body text-bodytext mt-3 lede-640">
+            블록 위에 마우스를 올리면 왼쪽에 점 여섯 개 손잡이가 나타납니다.
+            잡고 끌면 순서가 바뀌고, 클릭하면 삭제·복제·다른 블록으로 전환 메뉴가 열립니다.
+            노션에서 글은 줄이 아니라 블록 단위로 움직입니다.
+          </p>
+
+          <figure class="shot">
+            <div class="ui">
+              <div class="ui-bar">
+                <span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span>
+                <span class="ui-path">내 업무 홈 / 연습장</span>
+              </div>
+              <div class="ui-body">
+                <div class="ui-title">연습장</div>
+
+                <div class="mt-4">
+                  <div class="ui-blk"><span class="ui-bul"></span>오늘 정리할 것</div>
+                  <div class="ui-blk ui-blk-on">
+                    <span class="ui-handle"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                    주간 회의 안건
+                  </div>
+                  <div class="ui-blk"><span class="ui-bul"></span>다음 주 일정</div>
+                </div>
+
+                <div class="ui-menu">
+                  <div class="ui-item ui-item-on">
+                    <span class="ui-item-name">삭제</span>
+                    <span class="ui-item-desc">Del</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-item-name">복제</span>
+                    <span class="ui-item-desc">Ctrl + D</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-item-name">다른 블록으로 전환</span>
+                    <span class="ui-item-desc">제목 · 목록 등</span>
+                  </div>
+                  <div class="ui-item">
+                    <span class="ui-item-name">위로 옮기기</span>
+                    <span class="ui-item-desc">Ctrl + Shift + 위</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <figcaption class="shot-cap">손잡이를 클릭하면 이 메뉴가 열립니다</figcaption>
+          </figure>
+
+          <div class="demo">
+            <div class="demo-line">
+              <span class="kbd">손잡이 드래그</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">블록 순서 바꾸기</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">손잡이 클릭</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">삭제 · 복제 · 블록 전환</span>
+            </div>
+            <div class="demo-line">
+              <span class="kbd">Ctrl</span><span class="to">+</span><span class="kbd">Z</span>
+              <span class="to">→</span>
+              <span class="t-cap text-bodytext">실수한 동작 되돌리기 (맥은 Cmd + Z)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 자주 막히는 지점 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+
+    <h2 class="t-h2">여기서 자주 막힙니다</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">줄바꿈을 했는데 칸이 따로 놀아요</h3>
+        <p class="t-body text-bodytext mt-3">
+          엔터는 새 블록을 만듭니다. 같은 문단 안에서 줄만 바꾸고 싶다면
+          시프트와 엔터를 함께 누릅니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">지우려고 했는데 윗줄과 합쳐졌어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          빈 블록에서 백스페이스를 누르면 위 블록과 합쳐집니다.
+          블록째 지우려면 손잡이를 클릭해 삭제를 고르는 편이 안전합니다.
+        </p>
+      </div>
+
+      <div class="tip">
+        <div class="tip-mark">막히는 지점</div>
+        <h3 class="t-card-title text-ink mt-3">한글로 검색하면 안 나올 때가 있어요</h3>
+        <p class="t-body text-bodytext mt-3">
+          슬래시 뒤에 한글이 조합 중이면 목록이 늦게 걸립니다.
+          한 글자 더 치거나, 지우고 다시 치면 걸립니다.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 완료 체크 · 다음 단계 ══════════════ -->
+<section class="bg-canvas sec">
+  <div class="shell">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-10">
+
+      <div class="md:col-span-5">
+        <h2 class="t-h3">다 했는지 확인하기</h2>
+        <p class="t-body text-muted mt-3.5 lede-520">
+          네 개가 모두 되면 다음 단계로 넘어가세요. <br class="hidden md:block">하나라도 막히면 그 단계만 다시 합니다.
+        </p>
+      </div>
+
+      <div class="md:col-span-7">
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">연습장 페이지를 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">슬래시로 블록을 세 종류 이상 꺼내봤습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">단축 입력으로 제목과 체크박스를 만들었습니다</p></div>
+        <div class="done"><span class="done-box"></span><p class="t-body text-bodytext">블록을 드래그로 옮겨봤습니다</p></div>
+      </div>
+
+    </div>
+
+    <div class="pager mt-16">
+      <div class="pager-card pager-off">
+        <div class="t-cap text-muted">이전 단계</div>
+        <div class="t-card-title text-ink mt-1.5">첫 단계입니다</div>
+      </div>
+      <a href="level-2.html" class="pager-card pager-r">
+        <div class="t-cap text-muted">다음 단계</div>
+        <div class="t-card-title text-ink mt-1.5">레벨 2 · 백지에서 시작하지 않기</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ 푸터 ══════════════ -->
+<footer class="bg-soft">
+  <div class="shell py-20">
+
+    <a href="index.html" class="text-ink wordmark">Study Notion</a>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-10">
+
+      <div>
+        <div class="t-cap text-muted">학습</div>
+        <ul class="f-list">
+          <li><a href="index.html#path" class="t-body text-bodytext">전체 학습 경로</a></li>
+          <li><a href="level-1.html" class="t-body text-bodytext">기초 블록 다루기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">데이터베이스 입문</a></li>
+          <li><a href="level-4.html" class="t-body text-bodytext">협업과 권한 설정</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">자료실</div>
+        <ul class="f-list">
+          <li><a href="level-5.html" class="t-body text-bodytext">업무 구조 설계하기</a></li>
+          <li><a href="level-1.html#shortcut" class="t-body text-bodytext">단축 입력 정리표</a></li>
+          <li><a href="index.html#how" class="t-body text-bodytext">학습 방식 안내</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">자주 묻는 질문</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">단계별로 보기</div>
+        <ul class="f-list">
+          <li><a href="level-1.html" class="t-body text-bodytext">레벨 1 · 손이 먼저 익숙해지기</a></li>
+          <li><a href="level-2.html" class="t-body text-bodytext">레벨 2 · 백지에서 시작하지 않기</a></li>
+          <li><a href="level-3.html" class="t-body text-bodytext">레벨 3 · 데이터베이스라는 발상</a></li>
+          <li><a href="level-5.html" class="t-body text-bodytext">레벨 5 · 내 업무에 맞게 설계하기</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="t-cap text-muted">스터디 노션</div>
+        <ul class="f-list">
+          <li><a href="index.html#who" class="t-body text-bodytext">이런 분께 맞습니다</a></li>
+          <li><a href="index.html#why" class="t-body text-bodytext">왜 어려울까</a></li>
+          <li><a href="index.html#try" class="t-body text-bodytext">데이터베이스 체험</a></li>
+          <li><a href="index.html#faq" class="t-body text-bodytext">노션 계정 만들기 안내</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="t-cap text-muted f-copy">
+      © 2026 스터디 노션. 이 사이트는 노션 학습을 돕는 비공식 교육 자료입니다.
+      노션(Notion)은 Notion Labs, Inc.의 상표입니다.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
